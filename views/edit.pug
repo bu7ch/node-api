@@ -1,0 +1,11 @@
+extends layout
+block content 
+  h1 EDITION
+    form(action=`/api/v1/foodtrucks/edit/${foodtruck.id}`, method="post" class="form-horizontal")
+      .form-group
+        label.form-label(for='name') Name
+        input#input-example-1.form-input.col-9.col-sm-12(type='text',name="name" placeholder=`${foodtruck.name}`)
+      .form-group
+        label.form-label(for='foodtype') Foodtype
+        input#input-example-1.form-input.col-9.col-sm-12(type='text', name="foodtype" placeholder=`${foodtruck.foodtype}`)
+      button.btn.btn-primary(type='submit') Mettre à jour
