@@ -1,0 +1,10 @@
+extends layout
+block content
+  form(action="/api/v1/foodtrucks/add", method="post" class="form-horizontal")
+    .form-group
+      label.form-label(for='name') Name
+      input#input-example-1.form-input.col-9.col-sm-12(type='text',name="name" placeholder='Foodtruck name')
+    .form-group
+      label.form-label(for='foodtype') Footype
+      input#input-example-1.form-input.col-9.col-sm-12(type='text', name="foodtype" placeholder='type of food')
+    button.btn.btn-primary(type='submit') Envoyer
